@@ -54,41 +54,6 @@ An interactive web application to calculate Pokémon EV (Effort Value) distribut
 *   **Tailwind CSS** (via CDN)
 
 This project is designed to run directly in the browser without a complex build process, making it easy to get started.
-
-## 🚀 How to Use / Run
-
-1.  **Clone the repository (or download the files):**
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
-2.  **Open `index.html`:**
-    Simply open the `index.html` file in a modern web browser (like Chrome, Firefox, Edge, Safari).
-
-That's it! The application is entirely client-side and will run directly.
-
-## 📁 File Structure
-
-```
-.
-├── README.md                 // This file
-├── index.html                // Main HTML entry point
-├── index.tsx                 // React application entry (mounts App)
-├── App.tsx                   // Main React application component (state logic, layout)
-├── types.ts                  // TypeScript type definitions
-├── constants.ts              // Application constants (item data, EV limits, initial states)
-├── metadata.json             // Application metadata (name, description)
-├── components/               // Directory for React UI components
-│   ├── CollapsibleSection.tsx
-│   ├── CurrencyInputs.tsx
-│   ├── InventoryItemInput.tsx
-│   ├── ItemIcon.tsx
-│   ├── ResultsDisplay.tsx
-│   ├── StatInput.tsx
-│   └── TotalEVBar.tsx
-└── (No node_modules or package.json as it's a direct browser app for now)
-```
-
 ## ℹ️ Item Information
 
 The calculator uses the following EV-enhancing items:
