@@ -3,7 +3,7 @@
 
 An interactive web application to calculate Pokémon EV (Effort Value) distribution based on your desired stats, available items (Vitamins, Mochi, Feathers), and in-game currencies. It helps optimize item usage and plan purchases to reach your EV goals efficiently.
 
-![Placeholder for a screenshot of the EV Calculator in action - consider adding one!](https://via.placeholder.com/800x450.png?text=Pok%C3%A9mon+EV+Calculator+Screenshot)
+![](https://imgur.com/a/RGYsOmY)
 
 ## 🌟 Key Features
 
