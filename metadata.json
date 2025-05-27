@@ -1,0 +1,5 @@
+{
+  "name": "Pokémon EV Calculator with Inventory",
+  "description": "An interactive web application to calculate Pokémon EV (Effort Value) distribution based on your desired stats and available items (Vitamins, Mochi, Feathers). It helps optimize item usage to reach your EV goals.",
+  "requestFramePermissions": []
+}
