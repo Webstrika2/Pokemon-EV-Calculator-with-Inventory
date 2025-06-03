@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 interface ItemIconProps {
@@ -5,12 +6,11 @@ interface ItemIconProps {
   spriteName: string;
   category: 'Vitamin' | 'Mochi' | 'Feather';
   className?: string;
-  isLarge?: boolean; // For results display potentially
 }
 
 const SPRITE_BASE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/';
 
-const ItemIcon: React.FC<ItemIconProps> = ({ itemName, spriteName, category, className, isLarge }) => {
+const ItemIcon: React.FC<ItemIconProps> = ({ itemName, spriteName, category, className = 'w-6 h-6' }) => {
   const [error, setError] = useState(false);
   const spriteUrl = `${SPRITE_BASE_URL}${spriteName}.png`;
 
@@ -22,12 +22,10 @@ const ItemIcon: React.FC<ItemIconProps> = ({ itemName, spriteName, category, cla
       default: return '❓';
     }
   };
-  
-  const sizeClass = className ?? (isLarge ? 'w-10 h-10' : 'w-8 h-8'); // Default to w-8 h-8, or w-10 h-10 if isLarge
 
-  if (error || !spriteName || spriteName.includes('placeholder') || spriteName.endsWith('-mochi')) { // Mochi sprites aren't in items usually
+  if (error || !spriteName.trim() || spriteName.includes('placeholder')) { // Enhanced check for placeholder names
     return (
-      <span title={itemName} className={`text-2xl flex items-center justify-center ${sizeClass}`}>
+      <span title={itemName} className={`text-xl flex items-center justify-center ${className}`}>
         {getFallbackEmoji()}
       </span>
     );
@@ -37,7 +35,7 @@ const ItemIcon: React.FC<ItemIconProps> = ({ itemName, spriteName, category, cla
     <img
       src={spriteUrl}
       alt={itemName}
-      className={`${sizeClass} object-contain`}
+      className={`${className} object-contain`}
       onError={() => setError(true)}
       loading="lazy"
     />
