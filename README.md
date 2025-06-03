@@ -114,6 +114,17 @@ This application uses your browser's `localStorage` to save your item inventory 
 *   **State Management:** React Hooks (`useState`, `useCallback`, `useMemo`, `useEffect`)
 *   **Speech Recognition:** Web Speech API (browser dependent)
 
+## Deploying to GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the application
+using Vite and publishes the `dist` folder to GitHub Pages. To deploy:
+
+1. Push your changes to the `main` branch.
+2. In the repository settings, enable **GitHub Pages** and choose `GitHub
+   Actions` as the source.
+3. After the workflow completes, the app will be available at
+   `https://<your-user>.github.io/<your-repo>/`.
+
 ---
 
 *Pokémon and Pokémon character names are trademarks of Nintendo.*
